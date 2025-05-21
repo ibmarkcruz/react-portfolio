@@ -13,8 +13,8 @@ import ProjectDetails from "./pages/ProjectDetails";
 
 function Home() {
   return (
-    <section className="relative text-center h-dvh p-8 md:p-24 overflow-hidden">
-      <motion.h1 className="relative text-6xl text-white uppercase font-R1 mb-6 z-10 title"
+    <section className="relative text-center p-8 md:p-0 h-dvh overflow-hidden">
+      <motion.h1 className="relative text-3xl md:text-6xl xl:text-8xl text-white uppercase font-R1 mb-6 z-10 title"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -27,26 +27,26 @@ function Home() {
           <div class="aurora__item"></div>
         </div>
       </motion.h1>
-      <motion.p className="relative text-white text-3xl mb-6 z-10 uppercase font-OswaldBold"
+      <motion.p className="relative text-white text-1xl md:text-3xl xl:text-4xl mt-3 mb-6 z-10 uppercase font-OswaldBold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.7 }}
       >
         Full Stack | Front End Web Developer
       </motion.p>
-      <motion.p className="relative text-white text-2xl mb-6 z-10 font-RobotoFlex subtitle"
+      <motion.p className="relative text-white text-1xl mb-6 z-10 font-RobotoFlex subtitle"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.7 }}
       >
         Crafting sleek, modern, and memorable web experiences
       </motion.p>
-      <motion.div className="relative z-10 mt-12"
+      <motion.div className="relative z-10 mt-12 mb-6"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <Link to="/projects" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">View Projects</Link>
+        <Link to="/projects" className="btn"><span className="text text-black font-OswaldBold uppercase">View Projects</span><span class="shimmer"></span></Link>
       </motion.div>
     </section>
   );
@@ -54,8 +54,8 @@ function Home() {
 
 function About() {
   return (
-      <section className="relative text-center h-dvh p-8 md:p-24 overflow-hidden">
-      <motion.h1 className="relative text-6xl text-white uppercase font-R1 mb-6 z-10 title"
+      <section className="relative text-center h-dvh overflow-hidden">
+      <motion.h1 className="relative md:text-3xl text-5xl text-white uppercase font-R1 mb-6 z-10 title"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -132,7 +132,7 @@ function App() {
       <Navbar />
 
       {/* Routes */}
-      <main className="relative z-10 flex-1 flex flex-col justify-center items-center pt-20 pb-24 text-center">
+      <main className="relative z-10 flex-1 flex flex-col justify-center items-center mt-[150px] text-center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -145,7 +145,7 @@ function App() {
 
       {/* Footer */}
       <footer className="w-full bg-transparent backdrop-blur-sm border-t border-white/10 py-4 flex flex-col items-center mt-auto">
-        <div className="flex space-x-6 text-2xl mb-2 text-blue-400">
+        <div className="flex space-x-6 text-2xl mb-2 text-slate-500">
           <a href="#"><FaGithub /></a>
           <a href="#"><FaLinkedin /></a>
           <a href="mailto:ibmark_cruz@hotmail.com"><FaEnvelope /></a>

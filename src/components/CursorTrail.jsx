@@ -13,7 +13,7 @@ function CursorTrail() {
   }, []);
 
   return (
-    <motion.div className="fixed top-0 left-0 w-6 h-6 bg-blue-500 rounded-full pointer-events-none z-50"
+    <motion.div className="fixed top-0 left-0 w-4 h-4 bg-slate-300 rounded-full pointer-events-none z-50"
       animate={{
         x: position.x - 12, // center offset
         y: position.y - 12,

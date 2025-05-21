@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaHome, FaInfo, FaProjectDiagram, FaEnvelopeOpen } from "react-icons/fa";
+import { FaDoorOpen, FaDoorClosed, FaRegCaretSquareUp, FaHome, FaInfo, FaProjectDiagram, FaEnvelopeOpen } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,10 +39,10 @@ function Navbar() {
         {/* Mobile Hamburger Button (hidden on desktop) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white text-3xl"
+          className="md:hidden text-slate-500 text-5xl"
           aria-label="Toggle menu"
         >
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          {menuOpen ? <FaDoorClosed /> : <FaDoorOpen />}
         </button>
 
         {/* Mobile Menu (only shows when open) */}
