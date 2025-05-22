@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import ContactForm from "./components/ContactForm";
 import CursorTrail from "./components/CursorTrail";
 import heroImage from "./assets/images/hero.png";
+import aboutImage from "./assets/images/about-img.jpg";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 
@@ -34,7 +35,7 @@ function Home() {
       >
         Full Stack | Front End Web Developer
       </motion.p>
-      <motion.p className="relative text-white text-1xl mb-6 z-10 font-RobotoFlex subtitle"
+      <motion.p className="relative text-white text-1xl md:text-2xl xl:text-3xl mb-6 z-10 font-RobotoFlex subtitle"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.7 }}
@@ -54,54 +55,59 @@ function Home() {
 
 function About() {
   return (
-      <section className="relative text-center h-dvh overflow-hidden">
-      <motion.h1 className="relative md:text-3xl text-5xl text-white uppercase font-R1 mb-6 z-10 title"
+      <section className="relative text-center p-8 h-dvh overflow-hidden">
+      <div className="flex justify-around">
+      <motion.h1 className="relative text-3xl md:text-6xl xl:text-8xl text-white uppercase font-R1 mb-6 z-10 title"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
         About Me
-         <div class="aurora">
+        <div class="aurora">
           <div class="aurora__item"></div>
           <div class="aurora__item"></div>
           <div class="aurora__item"></div>
           <div class="aurora__item"></div>
         </div>
       </motion.h1>
-      <motion.p className="relative text-white text-left z-10 pt-6 font-RobotoFlex"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.7 }}
-      >
-        Full Stack and Front-End Web Developer with 7 years of experience building responsive, accessible, and data-driven websites. I specialize in WordPress development, Shopify customization, and database management, with a strong focus on clean code and seamless user experiences.
-      </motion.p>
-      <motion.p className="relative text-white text-left z-10 pt-6 font-RobotoFlex"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.7 }}
-      >
-        From full site migrations to custom API integrations and accessibility audits, I love helping businesses create smarter, faster, and more manageable online platforms.
-      </motion.p>
-      <motion.div className="relative z-10 mt-12"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-      >
-       <div className="flex justify-center space-x-8 text-4xl text-blue-600">
-        <SiHtml5 />
-        <SiCss3 />
-        <SiJavascript />
-        <SiPostgresql />
-        <SiShopify />
-        <SiRubyonrails />
-        <SiPhp />
-        <SiReact />
-        <SiTailwindcss />
-        <SiMysql />
-        <SiWordpress />
       </div>
-      </motion.div>
-    </section>
+      <article className="relative text-white text-1xl md:text-2xl text-left mb-6 z-10 font-RobotoFlex px-8">
+        <motion.p className="mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+        >
+          Full Stack and Front-End Web Developer with 7 years of experience building responsive, accessible, and data-driven websites. I specialize in WordPress development, Shopify customization, and database management, with a strong focus on clean code and seamless user experiences.
+        </motion.p>
+        <motion.p className="mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+        >
+          From full site migrations to custom API integrations and accessibility audits, I love helping businesses create smarter, faster, and more manageable online platforms.
+        </motion.p>
+        <motion.p className="mb-4"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+        >
+        When I'm not coding or working on new projects, you'll find me playing with my kids and spending quality time with my beautiful wife. Mountain biking is my form of meditation — it helps clear my mind, keeps me grounded, and inspires new ideas for the work I love doing.
+        </motion.p>
+        </article>
+          <div className="flex justify-center space-x-8 text-4xl text-slate-600 p-4">
+            <SiHtml5 />
+            <SiCss3 />
+            <SiJavascript />
+            <SiPostgresql />
+            <SiShopify />
+            <SiRubyonrails />
+            <SiPhp />
+            <SiReact />
+            <SiTailwindcss />
+            <SiMysql />
+            <SiWordpress />
+          </div>
+      </section>
   );
 }
 
