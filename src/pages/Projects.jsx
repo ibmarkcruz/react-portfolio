@@ -10,17 +10,23 @@ import projectsData from "../data/projectsData";
 
 function Projects() {
   return (
-    <section className="relative text-center h-dvh p-8 md:p-24 overflow-hidden">
+    <section className="relative text-center px-4 md:px-8 py-12 h-auto overflow-hidden">
       <motion.h1
-        className="relative text-3xl text-white uppercase font-R1 mb-6 z-10"
+        className="relative text-3xl md:text-5xl xl:text-6xl text-white uppercase font-R1 mb-12 z-10 title"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
         Featured Projects
+        <div className="aurora">
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
+        </div>
       </motion.h1>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-7xl mx-auto my-8 px-4 md:px-0">
         <Swiper
           spaceBetween={30}
           modules={[Navigation, Pagination, Autoplay]}
@@ -31,29 +37,22 @@ function Projects() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           breakpoints={{
-            640: { slidesPerView: 1 },
+            320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
         >
-            {projectsData.map((project) => (
+          {projectsData.map((project) => (
             <SwiperSlide key={project.id}>
-                <ProjectCard
+              <ProjectCard
                 logo={project.image}
                 title={project.title}
                 description={project.shortDescription}
                 detailLink={project.detailLink}
-                />
+              />
             </SwiperSlide>
-            ))}
+          ))}
         </Swiper>
-
-        <div className="swiper-button-prev text-white text-3xl absolute top-1/2 -left-8 z-10 cursor-pointer select-none">
-          &lt;
-        </div>
-        <div className="swiper-button-next text-white text-3xl absolute top-1/2 -right-8 z-10 cursor-pointer select-none">
-          &gt;
-        </div>
       </div>
     </section>
   );

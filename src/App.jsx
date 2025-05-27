@@ -21,11 +21,11 @@ function Home() {
         transition={{ duration: 0.7 }}
       >
         Ib Mark Cruz
-         <div class="aurora">
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
+         <div className="aurora">
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
+          <div className="aurora__item"></div>
         </div>
       </motion.h1>
       <motion.p className="relative text-white text-1xl md:text-3xl xl:text-4xl mt-3 mb-6 z-10 uppercase font-OswaldBold"
@@ -55,67 +55,90 @@ function Home() {
 
 function About() {
   return (
-      <section className="relative text-center p-8 h-dvh overflow-hidden">
+    <section className="relative text-center px-4 md:px-8 py-12 h-auto overflow-hidden">
       <div className="flex justify-around">
-      <motion.h1 className="relative text-3xl md:text-6xl xl:text-8xl text-white uppercase font-R1 mb-6 z-10 title"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        About Me
-        <div class="aurora">
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
-          <div class="aurora__item"></div>
-        </div>
-      </motion.h1>
+        <motion.h1
+          className="relative text-3xl md:text-6xl xl:text-8xl text-white uppercase font-R1 mb-12 z-10 title"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          About Me
+          <div className="aurora">
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+          </div>
+        </motion.h1>
       </div>
-      <article className="relative text-white text-1xl md:text-2xl text-left mb-6 z-10 font-RobotoFlex px-8">
-        <motion.p className="mb-4"
+
+      <article className="relative text-white text-lg md:text-2xl text-left mb-12 z-10 font-RobotoFlex px-4 md:px-8 pt-6 max-w-4xl mx-auto">
+        <motion.p className="mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
           Full Stack and Front-End Web Developer with 7 years of experience building responsive, accessible, and data-driven websites. I specialize in WordPress development, Shopify customization, and database management, with a strong focus on clean code and seamless user experiences.
         </motion.p>
-        <motion.p className="mb-4"
+        <motion.p className="mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
           From full site migrations to custom API integrations and accessibility audits, I love helping businesses create smarter, faster, and more manageable online platforms.
         </motion.p>
-        <motion.p className="mb-4"
+        <motion.p className="mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
-        When I'm not coding or working on new projects, you'll find me playing with my kids and spending quality time with my beautiful wife. Mountain biking is my form of meditation — it helps clear my mind, keeps me grounded, and inspires new ideas for the work I love doing.
+          When I'm not coding or working on new projects, you'll find me playing with my kids and spending quality time with my beautiful wife. Mountain biking is my form of meditation — it helps clear my mind, keeps me grounded, and inspires new ideas for the work I love doing.
         </motion.p>
-        </article>
-          <div className="flex justify-center space-x-8 text-4xl text-slate-600 p-4">
-            <SiHtml5 />
-            <SiCss3 />
-            <SiJavascript />
-            <SiPostgresql />
-            <SiShopify />
-            <SiRubyonrails />
-            <SiPhp />
-            <SiReact />
-            <SiTailwindcss />
-            <SiMysql />
-            <SiWordpress />
-          </div>
-      </section>
+      </article>
+
+      <div className="flex flex-wrap justify-center gap-6 text-3xl md:text-4xl text-slate-600 p-4">
+        <SiHtml5 />
+        <SiCss3 />
+        <SiJavascript />
+        <SiPostgresql />
+        <SiShopify />
+        <SiRubyonrails />
+        <SiPhp />
+        <SiReact />
+        <SiTailwindcss />
+        <SiMysql />
+        <SiWordpress />
+      </div>
+    </section>
   );
 }
 
 function Contact() {
   return (
-    <section className="p-12 text-center">
-      <h3 className="text-4xl font-bold mb-6">Contact Me</h3>
-      <ContactForm />
+    <section className="relative text-center px-4 md:px-8 py-12 h-auto overflow-hidden">
+      <div className="flex justify-center">
+        <motion.h1
+          className="relative text-3xl md:text-5xl xl:text-6xl text-white uppercase font-R1 mb-12 z-10 title leading-tight"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          Let's Create
+          <br />
+          Something Together
+          <div className="aurora">
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+            <div className="aurora__item"></div>
+          </div>
+        </motion.h1>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 md:px-0">
+        <ContactForm />
+      </div>
     </section>
   );
 }
